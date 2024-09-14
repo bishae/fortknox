@@ -2,6 +2,7 @@ import "@/styles/globals.css";
 
 import { GeistSans } from "geist/font/sans";
 import { type Metadata } from "next";
+import { Analytics } from "@vercel/analytics/react";
 
 import { TRPCReactProvider } from "@/trpc/react";
 import Header from "@/components/header";
@@ -24,6 +25,7 @@ export default function RootLayout({
           {children}
           <Footer />
         </TRPCReactProvider>
+        <Analytics />
       </body>
     </html>
   );
